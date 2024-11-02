@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get("/directors", { :controller => "misc", :action => "directors" })
 
   get("/directors/youngest", { :controller => "age", :action => "young" })
-  get("/directors/oldest", { :controller => "age", :action => "old" })
+  get("/directors/eldest", { :controller => "age", :action => "old" })
 end
