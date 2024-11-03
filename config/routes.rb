@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :movies, only: [:index, :show]
+
   get("/", { :controller => "misc", :action => "homepage" })
-  get("/movies", { :controller => "misc", :action => "movies" })
+  get("/movies", { :controller => "misc", :action => "movie" })
   get("/actors", { :controller => "misc", :action => "actors" })
   get("/directors", { :controller => "misc", :action => "directors" })
 

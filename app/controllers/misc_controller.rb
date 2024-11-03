@@ -3,7 +3,7 @@ class MiscController < ApplicationController
     render({ :template => "misc_templates/home"})
   end
 
-  def movies
+  def movie
     render({ :template => "misc_templates/movies"})
   end
 
@@ -14,4 +14,9 @@ class MiscController < ApplicationController
   def actors
     render({ :template => "misc_templates/actors"})
   end 
+
+  def show
+    @movie = Movie.find(params[:id])
+    render({ :template => "misc_templates/show"})
+  end
 end
