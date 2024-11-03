@@ -6,42 +6,37 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
-<body>
-  <nav>
-    <a href="/">Home</a>
-  </nav>
-
-  <h1>Movie #<%= @movie.id %> details</h1>
+  <h1>Movie #<%= @the_movie.id %> details</h1>
 
   <a href="/movies">Go back</a>
   <hr>
 
   <dl>
     <dt>Title</dt>
-    <dd><%= @movie.title %></dd>
+    <dd><%= @the_movie.title %></dd>
 
     <dt>Year</dt>
-    <dd><%= @movie.year %></dd>
+    <dd><%= @the_movie.year %></dd>
 
     <dt>Duration</dt>
-    <dd><%= @movie.duration %> minutes</dd>
+    <dd><%= @the_movie.duration %> minutes</dd>
 
     <dt>Description</dt>
-    <dd><%= @movie.description %></dd>
+    <dd><%= @the_movie.description %></dd>
 
     <dt>Image</dt>
     <dd>
-      <img src="<%= @movie.image_url %>" style="width:250px;">
+      <img src="<%= @the_movie.image %>" style="width:250px;">
     </dd>
 
     <dt>Director</dt>
-    <dd><%= @movie.director.name %></dd>
+    <dd><%= @the_movie.director.name %></dd>
 
     <dt>Created at</dt>
-    <dd><%= @movie.created_at %></dd>
+    <dd><%= @the_movie.created_at %></dd>
 
     <dt>Updated at</dt>
-    <dd><%= @movie.updated_at %></dd>
+    <dd><%= @the_movie.updated_at %></dd>
   </dl>
 
   <hr>
