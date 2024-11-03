@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :movies, only: [:index, :show]
-
+  get("/movies/:id", { :controller => "movies", :action => "show" })
   get("/", { :controller => "misc", :action => "homepage" })
   get("/movies", { :controller => "misc", :action => "movie" })
   get("/actors", { :controller => "misc", :action => "actors" })
