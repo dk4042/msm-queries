@@ -1,4 +1,14 @@
 class DirectorsController < ApplicationController
+
+  def young
+    @young_dir = Director.where.not(dob: nil).order(dob: :asc).last
+    render({ :template => "age_templates/youngest"})
+  end 
+
+  def old 
+    @old_dir = Director.where.not(dob: nil).order(dob: :desc).last
+    render({ :template => "age_templates/eldest"})
+  end 
   
   def index
     render({ :template => "misc_templates/directors"})
@@ -13,13 +23,5 @@ class DirectorsController < ApplicationController
 
     render({ :template => "misc_templates/show"})
   end
-
-  def young
-    render({ :template => "age_templates/youngest"})
-  end 
-
-  def old 
-    render({ :template => "age_templates/eldest"})
-  end 
 
 end
